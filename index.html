@@ -12,7 +12,7 @@
 </head>
 <body>
     
-   <div id="wrapper">
+  <div id="wrapper">
     <nav>
         <div class="topnav" id="myTopnav">
             <a href="#" class="active">Home</a>
@@ -32,29 +32,35 @@
 
 
     <section id="hero">
-       <a href="#intro"><button>...</button></a>
+      <a href="#intro"><button>Get started!</button></a>
     </section>
 
-    <section id="intro">
-        
-        <div class="grid-2">
-           <div class="col-2">
-            <h1 class="title">ABOUT THE ENGLISH PREMIER LEAGUE</h1>
-            <br>
+
+
+
+    <section class="responsive-section"><br><br>
+      <h2>ABOUT THE ENGLISH PREMIER LEAGUE</h2>
+      <div class="columns-container">
+          <div class="column">
             <p>The Premier League is the highest level of the English football league system. Contested by 20 clubs, it operates on a system of promotion and relegation with the English Football League (EFL). Seasons typically run from August to May, with each team playing 38 matches against all other teams, both home and away. Most games are played on Saturday and Sunday afternoons, with occasional weekday evening fixtures.</p>
-            <br>
-            <button class="mi-boton">+ìnfo<div class="cuadro-texto"> <!-- el botón tiene fallos, aun se tiene que arreglar -->
-              The competition was founded as the FA Premier League on 20 February 1992 following the decision of First Division clubs to break away from the English Football League. However, teams may still be relegated to and promoted from the EFL Championship. </div></button>
-           </div>
+            <a href="https://en.wikipedia.org/wiki/Premier_League" target="_blank">
+              <button>Read More</button>
+          </a>
+          </div>
+          <div class="column">
+              <img src="./img/trophy.png" alt="Imagen">
+          </div>
+      </div>
+  </section>
+    
 
-           <div class="col-2">
-               <img id="introimg" src="./img/trophy.png" alt="A few images from different episodes">
-           </div>
-        </div>
-    </section>
+    <section id="teams">
+      <h2 class="club-sites-title">CLUB SITES</h2>
+      <br>
 
-    <section id="teams" class="grid-container">
-      <div class="imagen-container">
+  
+      <div class="grid-container">
+          <div class="imagen-container">
         <a href="https://www.arsenal.com/" target="_blank">
           <img class="imagen" src="./img/arsenal.png" alt="Imagen 1"></a>
       </div>
@@ -155,160 +161,408 @@
       </div>
 
     </section>
-    
+
+
+
+<section id="seasons">
+  <h2>LAST SEASONS</h2>
+
+<div class="row">
+
+  <div class="column">
+    <div class="card">
+      <div class="text">
+        <img src="./img/2023.png" alt="img">
+        <button class="info-button" onclick="openLargeImageModal('./img/q2023.png')">+info</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <div class="text">
+        <img src="./img/2022.png" alt="img">
+        <button class="info-button" onclick="openLargeImageModal('./img/q2022.png')">+info</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <div class="text">
+        <img src="./img/2021.png" alt="img">
+        <button class="info-button" onclick="openLargeImageModal('./img/q2021.png')">+info</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <div class="text">
+        <img src="./img/2020.png" alt="img">
+        <button class="info-button" onclick="openLargeImageModal('./img/q2020.png')">+info</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <div class="text">
+        <img src="./img/2019.png" alt="img">
+        <button class="info-button" onclick="openLargeImageModal('./img/q2019.png')">+info</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <div class="text">
+        <img src="./img/2018.png" alt="img">
+        <button class="info-button" onclick="openLargeImageModal('./img/q2018.png')">+info</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <div class="text">
+        <img src="./img/2017.png" alt="img">
+        <button class="info-button" onclick="openLargeImageModal('./img/q2017.png')">+info</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <div class="text">
+        <img src="./img/2016.png" alt="img">
+        <button class="info-button" onclick="openLargeImageModal('./img/q2016.png')">+info</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+</section>
+
+<div class="large-image-modal" id="largeImageModal">
+  <span class="close-large-image-modal" onclick="closeLargeImageModal()">&times;</span>
+  <img class="large-image-modal-content" id="largeImageModalImg">
+</div>
+
+<section id="content-section">
+  <h1 class="main-title">TEAM BY CITIES</h1>
+    <div class="content-container">
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/d/embed?mid=1WxTzRcZFS9WMLgBF8-_cg8NVX-c&ehbc=2E312F" frameborder="0" style="border:0; width: 100%; height: 60vh;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
+<section id="accordion" class="accordion">
+  <br>
+  <h1>BIGGEST RIVALRIES IN PREMIER LEAGUE</h1>
+    <div class="accordion-container">
+
+    <details class="accordion-item">
+      <summary class="accordion-trigger">
+        <span class="accordion-title">
+          Manchester Derby
+        </span>
+        <span class="accordion-icon" aria-hidden="true">
+          &plus;
+        </span>
+
+      </summary>
+      <div class="accordion-content">
+        <p>The Manchester derby refers to football match between Manchester City and Manchester United, first contested in 1881. City play at the City of Manchester Stadium in Bradford, east Manchester, while United play at Old Trafford in the borough of Trafford, Greater Manchester; the two grounds are separated by approximately 6.4 km. The teams have played 191 matches in all competitions, United winning 78, City 60, and the remaining 53 having been drawn. </p>
+      </div>
+    </details>
+
+    <details class="accordion-item">
+      <summary class="accordion-trigger">
+        <span class="accordion-title">
+          Merseyside Derby
+        </span>
+        <span class="accordion-icon" aria-hidden="true">
+          &plus;
+        </span>
+
+      </summary>
+      <div class="accordion-content">
+        <p>The Merseyside derby is a football match between Everton and Liverpool, the two primary clubs in Liverpool, England. Named after the county of Merseyside, in which Liverpool is located, it is the longest running top-flight derby in England and has been played continuously since the 1962–63 season. Part of the rivalry is due to the two clubs' home grounds having less than a mile between them and being within sight of each other across Stanley Park, with Everton at Goodison Park and Liverpool at Anfield. Liverpool have won 98 of the meetings in all competitions, with 77 draws and 67 wins for Everton.</p>
+      </div>
+    </details>
+
+    <details class="accordion-item">
+      <summary class="accordion-trigger">
+        <span class="accordion-title">
+          North London Derby
+        </span>
+        <span class="accordion-icon" aria-hidden="true">
+          &plus;
+        </span>
+
+      </summary>
+      <div class="accordion-content">
+        <p>The North London derby is the meeting of the association football clubs Arsenal and Tottenham Hotspur, both of which are based in North London, England. Fans of both clubs consider the other to be their main rivals, and the derby is considered by many to be one of the fiercest derbies in the world. Although the two teams first played each other in 1887, the rivalry did not begin until 1913 when Arsenal moved their ground to North London from Woolwich, south of the River Thames.
+
+        194 games have been played between the two teams since their first game in the Football League in 1909, with 81 wins for Arsenal, 61 wins for Tottenham and 52 games drawn. When games played before both joined the Football League are included, 208 games have been played, with Arsenal winning 86, Tottenham 67, and 55 drawn</p>
+      </div>
+    </details>
+
+    <details class="accordion-item">
+      <summary class="accordion-trigger">
+        <span class="accordion-title">
+          Northwest Derby
+        </span>
+        <span class="accordion-icon" aria-hidden="true">
+          &plus;
+        </span>
+
+      </summary>
+      <div class="accordion-content">
+        <p>is a high-profile inter-city rivalry between English professional football clubs Liverpool and Manchester United. It is considered one of the biggest fixture in English football and one of the biggest and fiercest rivalries in world football. Players, fans and the media consider the fixture between the two clubs to be their biggest rivalry, above even their own local derbies, with Everton and Manchester City respectively. United lead in the head-to-head record between the two teams, with 82 wins to Liverpool's 71; the remaining 58 matches have finished as draws.
+        </p>
+      </div>
+    </details>
+    <details class="accordion-item">
+      <summary class="accordion-trigger">
+        <span class="accordion-title">
+          North West London Derby
+        </span>
+        <span class="accordion-icon" aria-hidden="true">
+          &plus;
+        </span>
+
+      </summary>
+      <div class="accordion-content">
+        <p>Is a rivalry between London-based professional association football clubs Arsenal Football Club and Chelsea Football Club. Arsenal play their home games at the Emirates Stadium, while Chelsea play their home games at Stamford Bridge.
+        Overall, Arsenal have won more games in the rivalry's history, having won 82 times to Chelsea's 66, with 60 draws. The clubs have contested five major finals: the 2002 FA Cup final, which Arsenal won 2-0, the 2007 League Cup final, which Chelsea won 2-1, the 2017 FA Cup final, which Arsenal won 2-1, the 2019 Europa League final, which Chelsea won 4-1, and the 2020 FA Cup final, which Arsenal won 2-1.
+      </p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<section>
+    <h1 class="main-title">SOME FACTS ABOUT THE CLUBS</h1>
+    <div class="table-container">
+      <table class="responsive-table">
+        <thead>
+          <tr>
+            <th>Team</th>
+            <th>City</th>
+            <th>Stadium</th>
+            <th>Coach</th>
+            <th>Top Goalscorer</th>
+            <th>Most Appearances</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Arsenal</td>
+            <td>London</td>
+            <td>Emirates Stadium</td>
+            <td>Mikel Arteta</td>
+            <td>T. Henry</td>
+            <td>T. Adams</td>
+          </tr>
+          <tr>
+            <td>Aston Villa</td>
+            <td>Birmingham</td>
+            <td>Villa Park</td>
+            <td>Unai Emery</td>
+            <td>G. Agbonlahor</td>
+            <td>G. Barry</td>
+          </tr>
+          <tr>
+            <td>Bournemouth</td>
+            <td>Bournemouth</td>
+            <td>Dean Court</td>
+            <td>Andoni Iraola</td>
+            <td>B. Pitman</td>
+            <td>S. Fletcher</td>
+          </tr>
+          <tr>
+            <td>Brentford</td>
+            <td>London</td>
+            <td>Brentford CS</td>
+            <td>Thomas Frank</td>
+            <td>J. Towers</td>
+            <td>K. Coote</td>
+          </tr>
+          <tr>
+            <td>Brighton & Hove Albion</td>
+            <td>Brighton & Hove</td>
+            <td>AMEX Stadium</td>
+            <td>Roberto de Zerbi</td>
+            <td>G. Murray</td>
+            <td>L. Dunk</td>
+          </tr>
+          <tr>
+            <td>Burnley</td>
+            <td>Burnley</td>
+            <td>Turf Moor</td>
+            <td>Vincent Kompany</td>
+            <td>R. Pointer</td>
+            <td>M. Duff</td>
+          </tr>
+          <tr>
+            <td>Chelsea</td>
+            <td>London</td>
+            <td>Stamford Bridge</td>
+            <td>Mauricio Pochettino</td>
+            <td>F. Lampard</td>
+            <td>J. Terry</td>
+          </tr>
+          <tr>
+            <td>Crystal Palace</td>
+            <td>London</td>
+            <td>Selhurst Park</td>
+            <td>Roy Hodgson</td>
+            <td>Max g 1</td>
+            <td>Max a 1</td>
+          </tr>
+          <tr>
+            <td>Everton</td>
+            <td>Liverpool</td>
+            <td>Goodison Park</td>
+            <td>Sean Dyche</td>
+            <td>C. Morrison</td>
+            <td>W. Zaha</td>
+          </tr>
+          <tr>
+            <td>Fulham</td>
+            <td>London</td>
+            <td>Craven Cottage</td>
+            <td>Narco Silva</td>
+            <td>G. Dacies</td>
+            <td>J. Haynes</td>
+          </tr>
+          <tr>
+            <td>Liverpool</td>
+            <td>Liverpool</td>
+            <td>Anfield</td>
+            <td>Jürgen Klopp</td>
+            <td>I. Rush</td>
+            <td>I. Callaghan</td>
+          </tr>
+          <tr>
+            <td>Luton Town</td>
+            <td>Luton</td>
+            <td>Kenilworth Road</td>
+            <td>Robert Edwards</td>
+            <td>B. Stein</td>
+            <td>R. Mpanzu</td>
+          </tr>
+          <tr>
+            <td>Manchester City</td>
+            <td>Manchester</td>
+            <td>Etihad Stadium</td>
+            <td>Pep Guardiola</td>
+            <td>S. Agüero</td>
+            <td>David Silva</td>
+          </tr>
+          <tr>
+            <td>Manchester United</td>
+            <td>Manchester</td>
+            <td>Old Trafford</td>
+            <td>Erik ten Hag</td>
+            <td>W. Rooney</td>
+            <td>R. Giggs</td>
+          </tr>
+          <tr>
+            <td>Newcastle United</td>
+            <td>Newcastle</td>
+            <td>St James' Park</td>
+            <td>Eddie Howe</td>
+            <td>A. Shearer</td>
+            <td>F. Clark</td>
+          </tr>
+          <tr>
+            <td>Nottingham Forest</td>
+            <td>Nottingham</td>
+            <td>City Ground</td>
+            <td>Steve Cooper</td>
+            <td>N. Clough</td>
+            <td>S. Chettle</td>
+          </tr>
+          <tr>
+            <td>Sheffield United</td>
+            <td>Sheffield</td>
+            <td>Bramall Lane</td>
+            <td>Paul Heckingbottom</td>
+            <td>B. Sharp</td>
+            <td>N. Montgomery</td>
+          </tr>
+          <tr>
+            <td>Tottenham Hotspurs</td>
+            <td>London</td>
+            <td>Tottenham Stadium</td>
+            <td>Ange Postecoglou</td>
+            <td>H. Kane</td>
+            <td>G. Mabbutt</td>
+          </tr>
+          <tr>
+            <td>West Ham United</td>
+            <td>London</td>
+            <td>London Stadium</td>
+            <td>David Moyes</td>
+            <td>G. Hurst</td>
+            <td>M. Noble</td>
+          </tr>
+          <tr>
+            <td>Wolves</td>
+            <td>Wolverhampton</td>
+            <td>Molineux Stadium</td>
+            <td>Gary O'Neil</td>
+            <td>J. Murray</td>
+            <td>L. Naylor</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<footer>
+  <div class="grid-2">
+      <div class="col-4">
+          <h3>Follow us:</h3>
+          <a href="https://www.facebook.com/premierleague/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+          <a href="https://twitter.com/premierleague/" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com/premierleague/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
   
-
-    <section id="records">
-        <h1 class="title">Records</h1>
-        <div class="grid-4">
-
-            <div class="col-4">
-                <div class="card">
-                    <img src="./img/season1.jpg" alt="">
-                    <h3>Most appearances</h3>
-                    <p>Gareth Barry held the record for the most appearances in the English Premier League, with a career total of 652 games. </p>
-                    <a href="https://en.wikipedia.org/wiki/Premier_League_records_and_statistics#Appearances" target="_blank">
-                      <button type="button">Read more</button>
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-4">
-                <div class="card">
-                    <img src="./img/season1.jpg" alt="">
-                    <h3>Most goals</h3>
-                    <p>Alan Shearer is the all-time top goal scorer of the English Premier League, with 260 goals in 411 appearances. </p>
-                    <a href="https://en.wikipedia.org/wiki/Premier_League_records_and_statistics#Goalscoring" target="_blank">
-                      <button type="button">Read more</button>
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-4">
-              <div class="card">
-                  <img src="./img/season1.jpg" alt="">
-                  <h3>Most direct free kick goals</h3>
-                  <p>David Beckham, with 18 free kick goals scored in 265 games leads this amazing statistic. </p>
-                  <a href="https://en.wikipedia.org/wiki/Premier_League_records_and_statistics#Free_kicks" target="_blank">
-                    <button type="button">Read more</button>
-                  </a>
-              </div>
-          </div>
-
-          <div class="col-4">
-                <div class="card">
-                    <img src="./img/season1.jpg" alt="">
-                    <h3>Most assists</h3>
-                    <p>Ryan Giggs held the record for the most assists in the English Premier League, with a career total of 161 assists. </p>
-                    <a href="https://en.wikipedia.org/wiki/Premier_League_records_and_statistics#Assists" target="_blank">
-                      <button type="button">Read more</button>
-                    </a>
-                </div>
-            </div>
-            
-        </div>
-
-
-    </section>
-
-
-
-    <section id="predictions">
-        <div class="accordion">
-
-            <article>
-              <input id="article1" type="radio" name="articles" checked>
-              <label for="article1">
-                <h2>Title 1</h2>
-              </label>
-              <div>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur veritatis fugiat possimus hic doloremque sint reiciendis? Quasi beatae explicabo qui quod atque a iste. Explicabo inventore quo expedita tempore amet!
-              </div>
-            </article>
-          
-            <article>
-              <input id="article2" type="radio" name="articles">
-              <label for="article2">
-                <h2>Title 2</h2>
-              </label>
-              <div>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur veritatis fugiat possimus hic doloremque sint reiciendis? Quasi beatae explicabo qui quod atque a iste. Explicabo inventore quo expedita tempore amet!
-              </div>
-            </article>
-          
-            <article>
-              <input id="article3" type="radio" name="articles">
-              <label for="article3">
-                <h2>Title 3</h2>
-              </label>
-              <div>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur veritatis fugiat possimus hic doloremque sint reiciendis? Quasi beatae explicabo qui quod atque a iste. Explicabo inventore quo expedita tempore amet!
-              </div>
-            </article>
-          
-            <article>
-              <input id="article4" type="radio" name="articles">
-              <label for="article4">
-                <h2>Title 4</h2>
-              </label>
-              <div>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur veritatis fugiat possimus hic doloremque sint reiciendis? Quasi beatae explicabo qui quod atque a iste. Explicabo inventore quo expedita tempore amet!
-              </div>
-            </article>
-          
-          </div>
-          
-    </section>
-
-
-
-
-    <section>Other section</section>
-    <footer>
-        <div class="grid-3d">
-            <div class="col-4">
-
-               <h3>Follow us:</h3>
-               <a href="#" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
-               <a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-               <a href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-               <a href="#" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-
-               <h3>Official Website:</h3>
-               <a href="https://www.premierleague.com/" target="_blank">Premier League</a>
-
-                <h3 id="myBtn">Créditos</h3>
-
-                <div id="myModal" class="modal">
-
-                <div class="modal-content">
+          <h3>Official Website:</h3>
+          <a href="https://www.premierleague.com/" target="_blank">Premier League</a>
+  
+          <h3 id="myBtn">Credits</h3>
+  
+          <div id="myModal" class="modal">
+              <div class="modal-content">
                   <span class="close">&times;</span>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis doloremque, reprehenderit vel laboriosam impedit at nam voluptas tempore sapiente provident dolores! Officia, accusamus dolore natus repellat modi maiores! Quis, iste!</p>
-                  <p>Ab quia quidem illo vel repellendus quod voluptatem rerum! Placeat quos molestiae in dignissimos sit iusto voluptas neque magni unde vitae! Eum veniam optio, libero quos aliquid ea harum quae!</p>
-                  <p>Molestias est, explicabo atque fuga nihil maxime magnam quisquam exercitationem sed in debitis expedita modi sequi velit suscipit minus animi praesentium, officia cupiditate ut maiores sunt veritatis id. Dolor, perferendis.</p>
-                </div>
+                  <p>Copyright © 2023, All Right Reserved</p>
+                  <p>Esta página esta hecha con fines educativos</p>
+                  <p>Lenguaje de Marcas - Proyecto Antonio González Mayorga</p>
+              </div>
+          </div>
+      </div>
+  <div class="col-4">
+      <a href="#"><p>Home</p></a>
+      <a href="#intro"><p>Introduction</p></a>
+      <a href="#teams"><p>Teams</p></a>
+      <a href="#records"><p>Records</p></a>
+      <a href="#gallery"><p>Gallery</p></a>
+      </div>
+  </div>
+</footer>
 
-</div> 
+      <script src="./js/funtions.js"></script>
 
-            </div>
-            <div class="col-4">
-               <a href="#"><p>Home</p></a>
-               <a href="#intro"><p>Introduction</p></a>
-               <a href="#teams"><p>Teams</p></a>
-               <a href="#records"><p>Records</p></a>
-               <a href="#gallery"><p>Gallery</p></a>
-               
-            </div>
-            <div class="col-2">
-             <div class="container">
-              <iframe class="responsive-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3197.256361209101!2d-4.557382323506227!3d36.74041717226424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd72f1d2ffe3a137%3A0xe095a3ea561debe2!2sC.%20Frederick%20Terman%2C%2029590%2C%20M%C3%A1laga!5e0!3m2!1ses!2ses!4v1701770117781!5m2!1ses!2ses" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-             </div>
-            </div>
-        </div>
-    </footer>
-   </div>
-    <script src="./js/funtions.js"></script>
-
-
-</body>
+    </div>
+  </body>
 </html>

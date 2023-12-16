@@ -1,5 +1,5 @@
 /*********************************************************/
-/*        Style sheet for Premier League web site         */
+/*        Style sheet for Premier League web site        */
 /*        author: Antonio González                       */
 /*        version: 1.0                                   */
 /*        comments: class project 2023-24                */
@@ -23,10 +23,6 @@ body {margin:0;padding:0;
           width:100%;
           margin:auto;}
 
-button {}
-
-button:hover {}
-
 html {
       scroll-behavior: smooth;
     }
@@ -36,37 +32,37 @@ html {
 /************************** nav style (from w3schools) **********************/
 
 nav {position:sticky;
-     top:0;
-     z-index:99;
-     opacity: 1;}
+      top:0;
+      z-index:99;
+      opacity: 1;}
 
 .fa-arrow-circle-up {position: fixed;
-                     bottom:20px;
-                     right:20px;
-                     font-size:2.5em !important;
-                     z-index:99;}
+                      bottom:20px;
+                      right:20px;
+                      font-size:2.5em !important;
+                      z-index:99;}
 
-a .fa-arrow-circle-up {color:gray;}
+.fa-arrow-circle-up:hover {color: #41a5ff;
+}
 
- .topnav {
+a .fa-arrow-circle-up {color: #ffffff;}
+
+.topnav {
       background-color: #3D195B;
-      overflow: hidden;
-    }
+      overflow: hidden;}
     
-    .topnav a {
-      float: left;
-      display: block;
-      color: #ffffff;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-      font-size: 1.2em;
-    }
+.topnav a {float: left;
+            display: block;
+            color: #ffffff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 1.2em;}
     
     .topnav a:hover {
       background: linear-gradient(to right, #05f0ff 0%,#41a5ff 25%,#617cff 50%,#6578ff 75%,#7467ff 100%);
-      color: black;
-      text-decoration: underline;
+      color: rgb(255, 255, 255);
+      text-decoration: none;
     }
 
     .topnav .icon {
@@ -77,90 +73,150 @@ a .fa-arrow-circle-up {color:gray;}
 
 /***************************   HERO SECTION *********************************/
 
-#hero {background-image: url(../img/premierleague.png);
-                         height:95vh;
-                         background-size: cover;
-                         background-position:center;
-                         position:relative;
-                        }
-
-#hero button {background-color:#808080;
-              color:black;
-              font-size:1.2em;
-              font-weight: bold;
-              padding:15px;
-              border:none;
-              border-radius: 10px;
-              position:absolute;
-              top:70%;
-              left:50%;
-              transform:translate(-50%,-50%);
-             
+#hero {
+  background-image: url(../img/premierleague.png);
+  height: 95vh;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  position: relative;
 }
 
-#hero button:hover {background-color: black;
-                    color:#808080;
-                    border:1px solid #808080;}
+@media screen and (max-width: 1350px) {
+  #hero {
+      background-image: url(../img/premierleague_small.jpg);
+  }
+}
 
-/******************  INTRO SECTION (GRID-2) ************************/
+@media screen and (max-width: 470px) {
+  #hero {
+      background-image: url(../img/premierleague_smallest.jpg);
+  }
+}
 
-.grid-2 {display:grid;
-         background-color: #3D195B;
-         grid-template-columns: 100%;}
+#hero button {
+  background-color: #3D195B;
+  color: #ffffff;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
-.col-2 {padding:4%;}
+#hero button:hover {
+  background: linear-gradient(to right, #05f0ff 0%, #41a5ff 25%, #617cff 50%, #6578ff 75%, #7467ff 100%);
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
 
-#introimg {width:80%;
-           display:block;
-           margin:auto;}
+@media screen and (max-width: 1350px) {
+  #hero button {
+      display: none;
+  }
+}
 
-/***************** BOTÓN *****************/
-/* el botón todavía tiene fallos como el texto que se muestra*/
- .mi-boton { 
-      padding: 10px 20px;
-      background-color: #fff;
-      color: #3D195B;
-      border: none;
-      cursor: pointer;
-      position: relative;
-      transition: opacity 0.3s ease-in-out, color 0.3s ease-in-out;
-    }
 
-    .mi-boton:hover {
-      background: linear-gradient(to right, #05f0ff 0%, #41a5ff 25%, #617cff 50%, #6578ff 75%, #7467ff 100%);
-      color: #000;
-    }
+/******************  INTRO SECTION  ************************/
+.responsive-section {
+  text-align: center;
+  background-color: #3D195B;
+  color: #ffffff;
+  padding: 20px; /* Ajusta según tus preferencias */
+}
 
-    .cuadro-texto {
-      max-width: 400px;
-      position: absolute;
-      background-color: #fff;
-      color: #333;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      opacity: 0;
-      transition: opacity 0.3s ease-in-out;
-    }
+.columns-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
-    .mi-boton:hover .cuadro-texto {
-      opacity: 1;
-    }
+.column {
+  flex: 1;
+  padding: 15px;
+  box-sizing: border-box;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centrar verticalmente el contenido */
+}
+
+.column p {
+  margin-bottom: 15px; /* Ajusta según tus preferencias */
+}
+
+.column button {
+  margin-top: 10px;
+  background-color: #ffffff;
+  color: #3D195B;
+  font-size: 0.8em;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.column button:hover {
+  background: linear-gradient(to right, #05f0ff 0%, #41a5ff 25%, #617cff 50%, #6578ff 75%, #7467ff 100%);
+  color: #ffffff;
+}
+
+
+.column img {
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 600px) {
+  .columns-container {
+      flex-direction: column;
+  }
+
+  .column {
+      width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 470px) {
+  .columns-container {
+      flex-direction: column;
+  }
+
+  .column {
+      width: 100%;
+  }
+}
 
 /******************** EQUIPOS *********************/
 
+#teams {
+  padding: 20px;
+}
+
+.club-sites-title {
+  text-align: center;
+  font-size: 2.2em;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
   gap: 30px;
-  padding: 20px;
   background-color: #ffffff;
 }
 
 .imagen-container {
   position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .imagen-container a {
@@ -175,103 +231,392 @@ a .fa-arrow-circle-up {color:gray;}
 }
 
 .imagen {
-  width: 100%;
-  height: auto;
+  width: 100px;
+  height: 100px;
   display: block;
   transition: transform 0.3s ease-in-out, border 0.3s ease-in-out;
 }
 
-/******************** seasons SECTION (GRID DE 4) *********************/
 
-#seasons {background-color: white;}
-.grid-4 {display:grid;
-         grid-template-columns: 100%;}
-
-.col-4 {padding:4%;}
-
-/**************** estilo de la card dentro del grid-4 ****************/
-
-.card {border:1px solid gray;
-      background-color: white;
-      border-radius:10px;
-      padding:4%;}
-
-.card:hover {box-shadow:3px 3px 5px #808080;}
-
-.card img {width:100%}
-
-/******************* estilo del video dentro de la card ***************/
-#seasons .container {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  padding-top: 56.25%;
+/* Responsive*/
+@media screen and (max-width: 6000px) {
+  .grid-container {
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(1, auto);
+  }
 }
 
-#seasons .responsive-iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
+@media screen and (max-width: 3000px) {
+  .grid-container {
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }
 }
 
-/****************** predictions section *******************************/
+@media screen and (max-width: 1920px) {
+  .grid-container {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, auto);
+  }
+}
 
-*, *::before, *::after {
-  padding: 0;
-  margin: 0 auto;
+@media screen and (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, auto);
+  }
+}
+
+/* Media Query para dispositivos de 400px o menos */
+@media screen and (max-width: 400px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(10, auto);
+  }
+}
+
+/******************** CARDS *********************/
+
+* {
   box-sizing: border-box;
 }
 
-#predictions {
-  font-family: 'Open Sans', sans-serif;
-  background-color: #333;
-  color: #fff;
+#seasons h2 {
   text-align: center;
-  padding: 3em 1em;
+  margin-top: 80px;
+  margin-bottom: 40px;
+  font-size: 2.2em;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px 10px;
+}
+
+.row {margin: 10px 10px;}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive */
+@media screen and (max-width: 1150px) {
+  .column {
+    width: 50%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  padding: 8px;
+  background-color: #3D195B;
+  transition: background 0.3s;
+}
+
+.card:hover {
+  box-shadow: 3px 3px 10px #808080;
+  background: linear-gradient(to right, #05f0ff 0%, #41a5ff 25%, #617cff 50%, #6578ff 75%, #7467ff 100%);
+}
+
+.card img {
+  width: 100%;
+  height: 80%;
+  vertical-align: middle;
+}
+
+.card button {
+  background-color: #3D195B;
+  color: #ffffff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin: 10px auto 0;
+}
+
+.card:hover button {
+  background-color: #ffffff;
+  color: #55306E;
+}
+
+
+
+/* Modal */
+.large-image-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.large-image-modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.close-large-image-modal {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/******************* MAPA *********************/
+
+#content-section {
+  text-align: center;
+}
+
+.main-title {
+  font-size: 2em;
+  margin: 20px 0;
+  margin-top: 20px;
+}
+
+.content-container {
+  display: flex;
+  flex-wrap: wrap; 
+}
+
+.map-container {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  width: 97%; 
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 60vh;
+}
+
+/****************** accordion section ******************/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+main {
+  min-height: 100vh;    
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 48px;
+  font-size: 2.2em;
 }
 
 .accordion {
-  max-width: 60%;
+  margin-bottom: 40px;
+  background-color: #ffffff;
+}
+
+.accordion-title {
+  background-color: #3D195B;
+  color: #ffffff;
+}
+
+.accordion-content {
+  color: #3D195B;
+  background-color: #ffffff;
+}
+
+.accordion-container {
+  width: 90%;
+  max-width: 1240px;
+  margin: 0 auto;
+  border: 3px solid #e0e0e0;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+
+.accordion-item {
+  width: 100%;
+}
+
+.accordion-trigger {
+  width: 100%;
+  display: block;
+  background-color: #3D195B;
+  color: #ffffff;
+  padding: 24px;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  text-align: left;
+  border: none;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.accordion-icon {
+  transition: transform 0.5s;
+}
+
+.accordion-item[open] .accordion-icon {
+  transform: rotate(45deg);
+}
+
+.accordion-item:not(:first-of-type) .accordion-trigger {
+  border-top: 3px solid #eaeaea;
+}
+
+.accordion-content p {
+  margin: 24px;
+}
+
+/******************* TABLA *********************/
+
+/* Estilos adicionales para la tabla */
+
+.main-title {
+  text-align: center;
+  font-size: 2.2em;
+}
+
+.table-container {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  overflow-x: auto; 
+}
+
+.responsive-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.responsive-table th, .responsive-table td {
+  border: 1px solid #ddd;
+  padding: 15px; 
   text-align: left;
 }
 
-article {
-  border: 1px solid #fff;
-  padding: 1em;
-  margin: 1em auto;
+.responsive-table th {
+  background-color: #3D195B;
+  color: white;
+  text-align: center;
 }
 
-input[type="radio"] {
-  appearance: none;
-  position: fixed;
-  top: -100vh; left: -100vh;
+.responsive-table tr:first-child th {
+  text-align: center;
+}
 
-  & ~ div {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 1s;
+.responsive-table tr:not(:first-child) td,
+.responsive-table tr:not(:first-child) th {
+  padding: 8px;
+}
+
+.responsive-table td, .responsive-table th {
+  border: 1px solid #ddd;
+}
+
+@media only screen and (max-width: 800px) {
+  .responsive-table th, .responsive-table td {
+    font-size: 12px;
   }
+}
 
-  &:checked ~ div {
-    max-height: 200px;
+@media only screen and (max-width: 700px) {
+  .responsive-table th, .responsive-table td {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  .responsive-table th, .responsive-table td {
+    font-size: 8px;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .responsive-table th, .responsive-table td {
+    font-size: 7px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .responsive-table th, .responsive-table td {
+    font-size: 6px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .responsive-table th, .responsive-table td {
+    font-size: 5px;
+  }
+}
+
+@media only screen and (max-width: 310px) {
+  .responsive-table th, .responsive-table td {
+    font-size: 4px;
   }
 }
 
 
 
 
-/******************** footer *****************************************/
-footer {background-color: black;
-        color:white;}
-.grid-3d {
-           display:grid;
-           grid-template-columns: 50% 50%; 
-      
+
+
+/******************** footer ********************/
+footer {
+    background: linear-gradient(to right, #05f0ff 0%, #41a5ff 25%, #617cff 50%, #6578ff 75%, #7467ff 100%);
+    color: rgb(255, 255, 255);
+    text-align: center; /* Añadido para centrar el contenido */
 }
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.footer .container {
+    display: none;
+}
+
+.footer .responsive-iframe {
+    display: none;
+}
+
+.col-4 {
+    padding: 20px;
+}
+
+.col-4 a p {
+    font-size: 1.5em;
+    margin-top: 15px;}
 
 footer h3 {margin:20px 0;}
 
@@ -287,18 +632,17 @@ footer .fa {
           
 footer a {color:white;
           text-decoration: none;}
+          
 /****** redes sociales en footer *****/
 footer .fa-facebook {background-color:#3B5998}
 
 footer .fa-twitter {background-color:#55ACEE ;}
 
-footer .fa-whatsapp {background-color: #25D366;}
-
 footer .fa-instagram {background: linear-gradient(115deg, #f9ce34, #ee2a7b, #6228d7);}
 
-/******* créditos ******************/
+/****************** créditos ******************/
 
- .modal {
+.modal {
   display: none;
   position: fixed;
   z-index: 1;
@@ -337,45 +681,12 @@ footer .fa-instagram {background: linear-gradient(115deg, #f9ce34, #ee2a7b, #622
 
 #myBtn {cursor:pointer;}
 
-/******* google maps en footer ***************/
-
-footer .container {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  padding-top: 75%;
-}
-
-
-footer .responsive-iframe {
-  position: absolute;
-  top: 10%;
-  left: 10%;
-  bottom: 0;
-  right: 0;
-  width: 80%;
-  height: 80%;
-}
-
-footer a p {font-size:1.2em;
-            margin-bottom:15px;
-            border:hidden;
-            padding-left:10px;
-            transition:1s;}
-
-footer a p:hover {color:rgb(196, 195, 195);
-                  border-left:3px solid white;}
-
-
-
-
 
 /************** responsividad ****************************************/
 
 @media only screen and (width>650px){   /****** TABLET *********/
       #wrapper {width:80%;}
       .grid-4 {grid-template-columns: auto auto;}
-     
 }
 
 @media only screen and (width>900px){   /************* COMPUTER **********/
@@ -387,7 +698,7 @@ footer a p:hover {color:rgb(196, 195, 195);
 /**************** responsive topnav (w3schools) *******************************/
 
  /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
- @media screen and (max-width: 850px) {
+@media screen and (max-width: 850px) {
       .topnav a:not(:first-child) {display: none;}
       .topnav a.icon {
         float: right;
